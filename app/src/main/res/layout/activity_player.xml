@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".PlayerActivity">
+
+        <ImageView
+            android:id="@+id/musicImage"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_margin="50dp"
+            android:src="@drawable/music_image_new"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/musicTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="You'r my love."
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/musicImage" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/musicTitle">
+
+            <ImageView
+                android:id="@+id/previousSong"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/previous_new" />
+
+            <ImageView
+                android:id="@+id/playPause"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="20dp"
+                android:src="@drawable/play_new" />
+
+            <ImageView
+                android:id="@+id/nextSong"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/next_new" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
